@@ -11,7 +11,7 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
     return AppBar(
       leading: const Icon(
         Icons.arrow_back_ios,
-        color: Colors.blue,
+        color: Color.fromARGB(255, 15, 144, 250),
       ),
       backgroundColor: Colors.white,
       elevation: 0,
@@ -24,12 +24,12 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
       actions: [
         IconButton(
           icon: const Icon(Icons.search),
-          color: Colors.blue,
+          color: Colors.blue[700],
           onPressed: () {},
         ),
         IconButton(
           icon: const Icon(Icons.person),
-          color: Colors.blue,
+          color: Colors.blue[700],
           onPressed: () {},
         ),
       ],
