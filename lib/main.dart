@@ -1,15 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:market_app/Model/categories.dart';
 import 'package:market_app/components/appbar.dart';
 
 import 'components/catogories_card.dart';
-import 'components/products.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
+  final List<CategoriesModel> _categories = [
+    CategoriesModel(
+      name: "Armors",
+      icon: const Icon(Icons.watch),
+    ),
+    CategoriesModel(
+      name: "Weapons",
+      icon: const Icon(Icons.gps_fixed_rounded),
+    ),
+    CategoriesModel(
+      name: "Flowers",
+      icon: const Icon(Icons.yard_outlined),
+    ),
+    // CategoriesModel(
+    //   name: "Food",
+    //   icon: const Icon(Icons.food_bank_outlined),
+    // ),
+  ];
 
   // This widget is the root of your application.
   @override
@@ -19,39 +37,10 @@ class MyApp extends StatelessWidget {
         child: Scaffold(
           backgroundColor: Colors.white,
           appBar: const MyAppBar(),
-          body: SizedBox(
-            child: Column(
-              children: [
-                const SizedBox(
-                  height: 20,
-                ),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: const [
-                      Categories(),
-                      Categories(),
-                      Categories(),
-                      Categories(),
-                      Categories(),
-                      Categories(),
-                      Categories(),
-                      Categories(),
-                      Categories(),
-                      Categories(),
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                const Products(),
-                const Products(),
-                const Products(),
-                const Products(),
-                const Products(),
-              ],
-            ),
+          body: Column(
+            children: [
+              Categories(categories: _categories),
+            ],
           ),
         ),
       ),

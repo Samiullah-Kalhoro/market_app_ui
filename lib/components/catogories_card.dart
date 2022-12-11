@@ -1,34 +1,42 @@
 import 'package:flutter/material.dart';
+import 'package:market_app/Model/categories.dart';
 
 class Categories extends StatelessWidget {
-  const Categories({super.key});
+  const Categories({super.key, required this.categories});
+
+  final List<CategoriesModel> categories;
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      Card(
-        color: Colors.white,
-        elevation: 5.0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10.0),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(15.0),
+    return Row(
+        children: categories.map((cat) {
+      return Container(
+        width: 110,
+        height: 90,
+        margin: const EdgeInsets.all(5),
+        child: Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15.0),
+          ),
+          elevation: 2.0,
           child: Column(
-            children: const [
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
               Icon(
-                Icons.watch,
-                color: Colors.blue,
+                cat.icon.icon,
+                color: const Color.fromARGB(255, 9, 57, 88),
               ),
               Text(
-                "Armors",
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.blue),
-              )
+                cat.name,
+                style: const TextStyle(
+                  color: Color.fromARGB(211, 9, 56, 88),
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
             ],
           ),
         ),
-      )
-    ]);
+      );
+    }).toList());
   }
 }
