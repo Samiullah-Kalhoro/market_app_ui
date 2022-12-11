@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:market_app/Model/categories.dart';
 import 'package:market_app/components/appbar.dart';
+import 'package:market_app/components/products_card.dart';
 
 import 'components/catogories_card.dart';
 
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
           body: Column(
             children: [
               Categories(categories: _categories),
+              ProductsCard(),
             ],
           ),
         ),
