@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:market_app/components/appbar.dart';
-import 'package:market_app/components/catogories_card.dart';
+
+import 'components/catogories_card.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,16 @@ class MyApp extends StatelessWidget {
           appBar: const MyAppBar(),
           body: ListView(
             scrollDirection: Axis.horizontal,
-            children: [
+            children: const [
+              Categories(),
+              Categories(),
+              Categories(),
+              Categories(),
+              Categories(),
+              Categories(),
+              Categories(),
+              Categories(),
+              Categories(),
               Categories(),
             ],
           ),
