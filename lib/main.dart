@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:market_app/components/appbar.dart';
 
 import 'components/catogories_card.dart';
+import 'components/products.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,20 +19,35 @@ class MyApp extends StatelessWidget {
         child: Scaffold(
           backgroundColor: Colors.white,
           appBar: const MyAppBar(),
-          body: ListView(
-            scrollDirection: Axis.horizontal,
-            children: const [
-              Categories(),
-              Categories(),
-              Categories(),
-              Categories(),
-              Categories(),
-              Categories(),
-              Categories(),
-              Categories(),
-              Categories(),
-              Categories(),
-            ],
+          body: SizedBox(
+            child: Column(
+              children: [
+                const SizedBox(
+                  height: 20,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: const [
+                      Categories(),
+                      Categories(),
+                      Categories(),
+                      Categories(),
+                      Categories(),
+                      Categories(),
+                      Categories(),
+                      Categories(),
+                      Categories(),
+                      Categories(),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Products(),
+              ],
+            ),
           ),
         ),
       ),
