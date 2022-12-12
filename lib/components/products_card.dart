@@ -19,13 +19,38 @@ class ProductsCard extends StatelessWidget {
       name: "Animal Muscle Oil",
       image: Image.asset("assets/images/animal_muscle_oil.png"),
     ),
+    Products(
+      name: "Ancient Red Scorpion",
+      image: Image.asset("assets/images/red_scorpion.png"),
+    ),
+    Products(
+      name: "Combustive Attack Chip 1",
+      image: Image.asset("assets/images/combustive_attack.png"),
+    ),
+    Products(
+      name: "Animal Muscle Oil",
+      image: Image.asset("assets/images/animal_muscle_oil.png"),
+    ),
+    Products(
+      name: "Ancient Red Scorpion",
+      image: Image.asset("assets/images/red_scorpion.png"),
+    ),
+    Products(
+      name: "Combustive Attack Chip 1",
+      image: Image.asset("assets/images/combustive_attack.png"),
+    ),
+    Products(
+      name: "Animal Muscle Oil",
+      image: Image.asset("assets/images/animal_muscle_oil.png"),
+    ),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 400,
       margin: const EdgeInsets.symmetric(vertical: 10),
-      child: Center(
+      child: SingleChildScrollView(
         child: Column(
           children: products.map((pro) {
             return Row(
