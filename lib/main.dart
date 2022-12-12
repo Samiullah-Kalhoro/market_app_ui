@@ -24,10 +24,26 @@ class MyApp extends StatelessWidget {
       name: "Flowers",
       icon: const Icon(Icons.yard_outlined),
     ),
-    // CategoriesModel(
-    //   name: "Food",
-    //   icon: const Icon(Icons.food_bank_outlined),
-    // ),
+    CategoriesModel(
+      name: "Food",
+      icon: const Icon(Icons.food_bank_outlined),
+    ),
+    CategoriesModel(
+      name: "Armors",
+      icon: const Icon(Icons.watch),
+    ),
+    CategoriesModel(
+      name: "Weapons",
+      icon: const Icon(Icons.gps_fixed_rounded),
+    ),
+    CategoriesModel(
+      name: "Flowers",
+      icon: const Icon(Icons.yard_outlined),
+    ),
+    CategoriesModel(
+      name: "Food",
+      icon: const Icon(Icons.food_bank_outlined),
+    ),
   ];
 
   // This widget is the root of your application.
