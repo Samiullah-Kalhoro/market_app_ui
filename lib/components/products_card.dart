@@ -50,8 +50,8 @@ class ProductsCard extends StatelessWidget {
     return Container(
       height: 400,
       margin: const EdgeInsets.symmetric(vertical: 10),
-      child: ListView(
-        children: products.map((pro) {
+      child: ListView.builder(
+        itemBuilder: (context, index) {
           return Row(
             children: [
               Expanded(
@@ -73,12 +73,12 @@ class ProductsCard extends StatelessWidget {
                         ),
                         width: 70.0,
                         height: 70.0,
-                        child: pro.image,
+                        child: products[index].image,
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 10.0),
                         child: Text(
-                          pro.name,
+                          products[index].name,
                           style: const TextStyle(
                             color: Colors.white,
                             fontSize: 15,
@@ -92,7 +92,8 @@ class ProductsCard extends StatelessWidget {
               ),
             ],
           );
-        }).toList(),
+        },
+        itemCount: products.length,
       ),
     );
   }
